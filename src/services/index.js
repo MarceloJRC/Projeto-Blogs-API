@@ -1,4 +1,4 @@
-const login = require('./login.services');
+const login = require('./login.service');
 
 module.exports = {
     login,
