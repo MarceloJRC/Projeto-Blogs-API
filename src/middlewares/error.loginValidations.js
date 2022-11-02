@@ -1,7 +1,7 @@
 require('dotenv/config');
 const jwt = require('jsonwebtoken');
 const joi = require('joi');
-const services = require('../services/login.services');
+const services = require('../services/login.service');
 
 const joiSchema = joi.object({
   email: joi.string()
