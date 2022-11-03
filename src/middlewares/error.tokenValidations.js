@@ -4,7 +4,7 @@ const { login } = require('../services/login.service');
 const validateToken = async (req, res, next) => {
     const user = await login(req.body);
     if (user) {
-      res.status(409).json({ message: 'User already registered' });
+      return res.status(409).json({ message: 'User already registered' });
     }
     const jwtConfig = { 
         expiresIn: '7d',
