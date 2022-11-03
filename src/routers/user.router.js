@@ -4,10 +4,11 @@ const { validateToken, getToken } = require('../middlewares/error.tokenValidatio
 const { registerUser, getUsers, getUserById } = require('../controllers/user.controller');
 
 const router = express.Router();
-router.use(getToken);
 
 router.post('/', validateUser,
  validateToken, registerUser);
+
+router.use(getToken);
 
 router.get('/', getUsers);
 
