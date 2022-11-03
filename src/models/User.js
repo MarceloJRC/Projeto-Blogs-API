@@ -23,7 +23,6 @@ const UserModel = (sequelize, DataTypes) => {
           as: 'blogpost'
         })
     };
-  
     return User;
   };
   
